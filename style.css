@@ -1,0 +1,386 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1vw;
+  font-family: 'Yu Mincho', 'Hiragino Mincho Pro', Georgia, 'Times New Roman', serif;
+  background-color: rgb(246, 230, 211);
+  font-weight: bold;
+}
+
+header {
+  width: 100%;
+  height: 10vh;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: rgb(38, 90, 38);
+  color: rgb(246, 230, 211);
+  font-weight: bold;
+}
+
+header p {
+  margin-left: 3vw;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+  max-width: 8vw;
+  max-height: 12vh;
+  margin-top: 1.5%;
+  margin-right: 60vw;
+}
+
+main {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  height: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.information {
+  width: auto;
+  height: auto;
+  display: flex;
+  margin: 3% 5%;
+  gap: 2vw;
+  align-items: stretch;
+}
+
+.text {
+  background-color: #f4f1e9;
+  border: 4px solid #264a38;
+  padding: 3vw;
+  border-radius: 12px;
+  margin: 0 2%;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.toc {
+  background-color: #4b7050;
+  color: #fff;
+  padding: 1vh 2vw;
+  border-radius: 8px;
+  width: fit-content;
+  font-size: 2vw;
+  margin-bottom: 3vh;
+  scroll-margin-top: 12vh;
+}
+
+.toc::before {
+  content: "🌿 ";
+}
+
+.toc::after {
+  content: "🌿 ";
+}
+
+.text p {
+  font-size: 1.2vw;
+  line-height: 2;
+  color: #333;
+  margin: 1vh 0;
+}
+
+.text,
+.tamayumap {
+  flex: 1;
+  max-width: 50%;
+}
+
+.tamayumap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2vh;
+}
+
+.tamayumap img,
+.tamayumap iframe {
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+  border: 4px solid #264a38;
+  border-radius: 12px;
+  background-color: #fffaf0;
+}
+
+.spot {
+  margin-left: 11vw;
+  padding: 1%;
+  width: fit-content;
+  box-shadow: 2px inset;
+  background-color: #4b7050;
+  color: white;
+}
+
+.articles {
+  height: 60%;
+  margin: 5vh 10vw;
+}
+
+.articles a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.article {
+  margin: 1vw;
+  text-align: center;
+  box-shadow: 10px 10px 15px -10px;
+  background: #fffaf0;
+  border: 1px solid #d4c2a1;
+  border-radius: 10px;
+  transition: transform 0.2s ease;
+}
+
+.article:hover {
+  transform: scale(1.03);
+}
+
+.article img {
+  width: 100%;
+  height: auto;
+}
+
+footer {
+  background-color: rgb(38, 90, 38);
+  color: #f6e6d3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+  font-size: 1.2vw;
+}
+
+.article-section {
+  display: flex;
+  align-items: flex-start;
+  margin: 3%;
+}
+
+.main_visual {
+  width: 100%;
+  height: 75vh;
+}
+
+.main-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #264a38;
+  padding: 2%;
+  line-height: 1.6;
+  max-width: 90%;
+  border-left: 6px solid #8cbf9f;
+  background-color: #f9f9f6;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.05);
+}
+
+.main-paragraph {
+  font-size: 1.05rem;
+  line-height: 2;
+  color: #264a38;
+  max-width: 900px;
+  margin: 0 auto 2em;
+  padding: 0 1em;
+  background-color: #f9f9f6;
+  border-left: 4px solid #d0e8da;
+  border-radius: 4px;
+}
+
+.list {
+  border: 2px solid black;
+}
+
+.toc-container {
+  background-color: #f9f9f6;
+  padding: 1.5em;
+  border-radius: 10px;
+  border: 1px solid #dcdcd2;
+  margin-bottom: 2em;
+}
+
+.toc-container h2 {
+  font-size: 200%;
+  margin-top: 0;
+  color: #264a38;
+}
+
+.toc-container ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 1em;
+}
+
+.toc-container ul li {
+  margin: 0.8em 0;
+  padding-left: 1.4em;
+  position: relative;
+  font-size: 1.1em;
+  color: #264a38;
+  transition: color 0.2s;
+}
+
+.toc-container ul li::before {
+  content: "▸";
+  color: #4b7050;
+  position: absolute;
+  left: 0;
+  top: 0.1em;
+}
+
+.toc-container ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.toc-container ul li a:hover {
+  color: #3a5f4a;
+  text-decoration: underline;
+}
+
+.article-content {
+  flex: 2;
+  width: 10%;
+}
+
+.walk-section {
+  margin: 5vh auto;
+  padding: 2vw;
+  max-width: 900px;
+  background-color: #f4f1e9;
+  border-left: 6px solid #4b7050;
+  border-radius: 12px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
+}
+
+.walk-section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.section-image {
+  width: 100%;
+  border-radius: 8px;
+  margin: 2vh 0;
+}
+
+.swiper {
+  overflow: hidden;
+  width: 100%;
+  height: 85vh;
+}
+
+.swiper-slide {
+  position: relative;
+  text-align: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-slide div {
+  position: absolute;
+  top:  80%;
+  left: 10%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translateY(-50%);
+  font-size: 1vw;
+  z-index: 1;
+}
+
+.swiper-slide h2 {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 2vh;
+  width: fit-content;
+}
+
+.swiper-slide p {
+  background-color: rgba(0, 0, 0, 0.65);
+  color: white;
+  padding: 2vh;
+  width: fit-content;
+}
+
+.side-navigation {
+  flex: 1;
+  width: 40%;
+  padding: 2rem;
+  background-color: #f4f1e9;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  margin-left: 2rem;
+  position: sticky;
+  top: 12vh;
+}
+
+.side-navigation .flex {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  background-color: #fffaf0;
+  border: 1px solid #d4c2a1;
+  padding: 1rem;
+  border-radius: 0.625rem;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.side-navigation .flex:hover {
+  transform: translateY(-0.2rem);
+}
+
+.side-navigation img {
+  width: 5vw;
+  height: auto;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+
+.side-navigation h3 {
+  font-size: 1.1rem;
+  margin: 0 0 0.5rem 0;
+  color: #264a38;
+}
+
+.side-navigation p {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.reason {
+  margin: 3% auto;
+  width: 60%;
+}
+
+.reason-text {
+  font-size: 130%;
+  background-color: #f4f1e9;
+  border: 4px solid #264a38;
+  padding: 3vw;
+  border-radius: 12px;
+  margin: 0 2%;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
